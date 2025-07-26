@@ -1,0 +1,32 @@
+//
+// Created by 69431 on 2023/9/24.
+//
+
+#ifndef HWIDGETDEMO_MAINWIDGET_H
+#define HWIDGETDEMO_MAINWIDGET_H
+
+#include <QWidget>
+#include "HTableView.h"
+#include "ImageWidget.h"
+#include "FramelessWidget.h"
+
+QT_BEGIN_NAMESPACE
+namespace Ui { class MainWidget; }
+QT_END_NAMESPACE
+
+class MainWidget : public QWidget {
+Q_OBJECT
+
+public:
+    explicit MainWidget(QWidget *parent = nullptr);
+
+    ~MainWidget() override;
+
+private:
+    Ui::MainWidget *ui;
+    HTableView * tableView = nullptr;
+    ImageWidget * imageWidget;
+};
+
+
+#endif //HWIDGETDEMO_MAINWIDGET_H
