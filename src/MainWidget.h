@@ -21,11 +21,13 @@ public:
     explicit MainWidget(QWidget *parent = nullptr);
 
     ~MainWidget() override;
-
+protected slots:
+    void slot_ImageWatch();
+    void slot_FramelessWidget();
+protected:
+    void initConnet();
 private:
     Ui::MainWidget *ui;
-    HTableView * tableView = nullptr;
-    ImageWidget * imageWidget;
 };
 
 

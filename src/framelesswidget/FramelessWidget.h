@@ -7,7 +7,7 @@ class QLabel;
 class FramelessWidget : public QWidget {
     Q_OBJECT
 public:
-    FramelessWidget(QWidget* parent = nullptr);
+    explicit FramelessWidget(QWidget* parent = nullptr);
 protected:
     void initUI();
     void initSubControl();

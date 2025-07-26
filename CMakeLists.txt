@@ -15,17 +15,18 @@ find_package(Qt5 COMPONENTS
 file(GLOB SRC_LIST "src/*")
 file(GLOB SRC_TABLEVIEW "src/tableview/*")
 file(GLOB SRC_IMAGEWIDGET "src/imagewidget/*")
-file(GLOB SRC_TREEVIEW" src/treeview/*")
-file(GLOB SRC_FRAMELESSWIDGET" src/framelesswidget/*")
+file(GLOB SRC_TREEVIEW "src/treeview/*")
+file(GLOB SRC_FRAMELESSWIDGET "src/framelesswidget/*")
 list(APPEND ALL_SRC_LIST ${SRC_LIST})
 list(APPEND ALL_SRC_LIST ${SRC_TABLEVIEW})
 list(APPEND ALL_SRC_LIST ${SRC_IMAGEWIDGET})
 list(APPEND ALL_SRC_LIST ${SRC_TREEVIEW})
 list(APPEND ALL_SRC_LIST ${SRC_FRAMELESSWIDGET})
-
+message("ALL_SRC_LIST ${ALL_SRC_LIST}")
 add_executable(${PROJECT_NAME} ${ALL_SRC_LIST})
 
 target_include_directories(${PROJECT_NAME} PRIVATE
+        src
         src/tableview
         src/imagewidget
         src/treeview

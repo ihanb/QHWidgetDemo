@@ -1,4 +1,4 @@
-#include "FramelessWidget.h"
+﻿#include "FramelessWidget.h"
 #include <QWidget>
 #include <QGraphicsDropShadowEffect>
 #include <QVBoxLayout>
@@ -54,7 +54,7 @@ void FramelessWidget::initUI() {
 }
 
 void FramelessWidget::initConnect() {
-    QObject::connect(m_btn_close, &QPushButton::clicked, this, &ShadowWidget::close);
+    QObject::connect(m_btn_close, &QPushButton::clicked, this, &FramelessWidget::close);
 }
 
 void FramelessWidget::initSubControl() {
